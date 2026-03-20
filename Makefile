@@ -1,13 +1,22 @@
-.PHONY: install run test redteam
+.PHONY: install run-api run-ui test docker-up docker-down
 
 install:
 	pip install -r requirements.txt
 
-run:
+run-api:
 	uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
 
-test:
-	python tests/test_guardrails.py
+run-ui:
+	streamlit run ui/app.py
 
-redteam:
-	curl -s -X POST http://localhost:8000/redteam | python3 -m json.tool
+test:
+	python tests/test_*.py
+
+docker-up:
+	docker-compose up --build -d
+
+docker-down:
+	docker-compose down
+
+logs:
+	docker-compose logs -f api
