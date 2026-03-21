@@ -1,5 +1,7 @@
 # LLM Safety & Guardrails Layer
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Render-7c3aed?style=for-the-badge&logo=render)](https://llm-safety-guardrails.onrender.com) [![GitHub](https://img.shields.io/badge/GitHub-Naresh1401-181717?style=for-the-badge&logo=github)](https://github.com/Naresh1401/LLM-safety-guardrails)
+
 A production-ready safety layer that sits between users and your LLM — detecting prompt injection attacks, redacting PII, filtering toxic content, and enforcing topic boundaries. Runs in < 10ms on the hot path.
 
 ## The Problem
