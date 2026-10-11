@@ -56,5 +56,4 @@ class RedTeamRunner:
             got  = "BLOCKED" if r.blocked else "ALLOWED"
             lines.append(f"{icon} [{r.case.category}] {r.case.description}")
             lines.append(f"   Expected: {exp} | Got: {got}")
-        return "
-".join(lines)
+        return "\n".join(lines)
